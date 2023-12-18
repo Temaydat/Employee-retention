@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Employee retention system</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="satisfaction_level" placeholder="satisfaction_level" required="required" /><br>
+    	<input type="text" name="last_evaluation" placeholder="last_evaluation" required="required" /><br>
+        <input type="text" name="number_project" placeholder="number_project" required="required" /><br>
+        <input type="text" name="average_montly_hours" placeholder="average_montly_hours" required="required" /><br>
+        <input type="text" name="time_spend_company" placeholder="time_spend_company" required="required" /><br>
+        <input type="text" name="Work_accident" placeholder="Work_accident" required="required" /><br>
+        <input type="text" name="promotion_last_5years" placeholder="promotion_last_5years" required="required" /><br>
+        <input type="text" name="dept_RandD" placeholder="dept_RandD" required="required" /><br>
+        <input type="text" name="dept_accounting" placeholder="dept_accounting" required="required" /><br>
+        <input type="text" name="dept_hr" placeholder="dept_hr" required="required" /><br>
+        <input type="text" name="dept_management" placeholder="dept_management" required="required" /><br>
+        <input type="text" name="dept_marketing" placeholder="dept_marketing" required="required" /><br>
+        <input type="text" name="dept_product_mng" placeholder="dept_product_mng" required="required" /><br>
+        <input type="text" name="dept_sales" placeholder="dept_sales" required="required" /><br>
+        <input type="text" name="dept_support" placeholder="dept_support" required="required" /><br>
+        <input type="text" name="dept_technical" placeholder="dept_technical" required="required" /><br>
+        <input type="text" name="salary_low" placeholder="salary_low" required="required" /><br>
+        <input type="text" name="salary_medium" placeholder="salary_medium" required="required" /><br>
+    
+
+
+    
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
